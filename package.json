@@ -1,0 +1,25 @@
+{
+  "name": "todolist-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "v12.18.3"
+  },
+  "dependencies": {
+    "@shelf/jest-mongodb": "^1.2.5",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.8"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4"
+  }
+}

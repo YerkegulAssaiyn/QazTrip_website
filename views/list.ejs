@@ -1,0 +1,136 @@
+<%- include("header") -%>
+        <script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <nav id="menu">
+            <div class="menu-item">
+                <div class="menu-text">
+                    <a href="#">Home</a>
+                </div>
+                <div class="sub-menu">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fal fa-wind-turbine"></i></div>
+                        <div class="text">
+                          <a href="/home"><div class="title">Homepage <i class="far fa-arrow-right"></i></div></a>
+                            <div class="sub-text">To see news about rules in this time</div>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><i class="fal fa-lightbulb-on"></i></div>
+                        <div class="text">
+                          <a href="/public/About-us.html"><div class="title">About us <i class="far fa-arrow-right"></i></div></a>
+                            <div class="sub-text">Think of an idea, and have an AI create it.</div>
+                        </div>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon"><i class="fal fa-bomb"></i></div>
+                        <div class="text">
+                          <a href="/public/contacts.html"><div class="title">Contact us <i class="far fa-arrow-right"></i></div></a>
+                            <div class="sub-text">Remove mass from any object.</div>
+                        </div>
+                    </div>
+                    <div class="sub-menu-holder"></div>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-text">
+                    <a href="/public/filter1.html">Filter</a>
+                </div>
+                <div class="sub-menu triple">
+                    <div class="top-container gb c icon-box">
+                        <div class="icon big"><i class="far fa-book"></i></div>
+                        <div class="text">
+                            <div class="title">Where to start</div>
+                            <div class="sub-text">Find out where to begin below</div>
+                        </div>
+                        <div class="box">
+                        <a href="/public/bayanaul.html">Bayanaul</a>
+                        <a href="/public/markakol.html">Markakol</a>
+                        <a href="/public/BelukhaMountain.html">Belukha</a>
+                        <a href="/public/BAL.html">Big Almaty Lake</a>
+                        <a href="/public/Burabay.html">Burabay</a>
+                        <a href="/public/charyn.html">Charyn Canyon</a>
+                        <a href="/public/kaiyndy.html">Kaiyndy</a>
+                        <a href="/public/Katon.html">Katon</a>
+                        <a href="/public/Imantau-Shalkar.html">Lakes Imantau and Shalkar</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-text">
+                  <a href="/public/blog.html">Blog</a>
+              </div>
+              <div class="sub-menu">
+                    <div class="text">A blog can contain images and video as well as text. 
+                            A reader can leave a comment under a blog post. 
+                            The lyrics are personal and every blogger has his or her own personal style. 
+                            The order of the blog articles is usually reversed chronologically. 
+                            The last piece written is at the top. The articles in the blog are called blog post or shortly post. 
+                            A blog is expected to be regularly updated with a new blog post. Each blog post will then receive an appearance date. 
+                            As a reader you can then see when the last update has been. In principle, a website does not have to be changed. 
+                            Unless the information on it is outdated or incorrect. A website is therefore called a static site. 
+                            A website is often more difficult to maintain, maintenance is therefore usually outsourced
+                    </div>
+                <div class="sub-menu-holder"></div>
+            </div>
+               </div>
+            <div class="menu-item">
+                <div class="menu-text">
+                    <a href="#">Settings</a>
+                </div>
+                <div class="sub-menu">
+                    <div class="icon-box">
+                        <a href="/password"><div class="icon"><i class="far fa-satellite"></i></div>
+                        <div class="text">
+                            <div class="title">Change password <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">You can change your password.</div>
+                        </div></a>
+                    </div>
+                    <div class="icon-box">
+                        <a href="/delete"><div class="icon"><i class="fab fa-twitter-square"></i></div>
+                        <div class="text">
+                            <div class="title">Delete account <i class="far fa-arrow-right"></i></div>
+                            <div class="sub-text">You can change your Username.</div>
+                        </div></a>
+                    </div>
+                    <div class="sub-menu-holder"></div>
+                </div>
+            </div>
+            <div id="sub-menu-container">
+                <div id="sub-menu-holder">
+                    <div id="sub-menu-bottom">
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="box" id="heading">
+          <h2> <%= listTitle %> </h2>
+          <h3> <%= date %> </h3>
+        </div>
+      
+        <div class="box">
+      
+          <%newListItems.forEach(function(item) {%>
+            <form action="/deleted" method="post">
+              <div class="item">
+                <input type="checkbox" name="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+                <p><%=  item.name  %></p>
+              </div>
+              <input type="hidden" name="customListName" value="<%=listTitle%>">
+            </form>
+      
+          <%})%>
+      
+            <form class="item" action="/places" method="post">
+              <input type="text" name="newItem" placeholder="New Place" autocomplete="off">
+              <button type="submit" name="list" value=<%=listTitle%>>+</button>
+            </form>
+        </div>
+  
+
+<%- include("footer") -%>

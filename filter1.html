@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/resetF.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/styleF.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Filters</title>
+</head>
+<body>
+	<header class="cd-header">
+		<h1>Content Filters</h1>
+	</header>
+
+	<main class="cd-main-content">
+		<div class="cd-tab-filter-wrapper">
+			<div class="cd-tab-filter">
+				<ul class="cd-filters">
+					<li class="placeholder"> 
+						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
+					</li> 
+					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
+					<li class="filter" data-filter=".pop"><a href="#0" data-type="color-1">Most popular</a></li>
+				</ul> <!-- cd-filters -->
+			</div> <!-- cd-tab-filter -->
+		</div> <!-- cd-tab-filter-wrapper -->
+
+		<section class="cd-gallery">
+			<ul>
+				<a href="bayanaul.html"><li class="mix Bayanaul sea mountain forest normal north"><img src="css/img/pavlodar-1.jpg" alt="Image 1"><p>Bayanaul</p></li></a>
+				<a href="BelukhaMountain.html"><li class="mix Belukha sea mountain forest normal east"><img src="css/img/samie-krasivie-mesta-rossii-gora-beluha.5004.orig.jpg" alt="Image 2"><p>Belukha Mountain</p></li></a>
+				<a href="Katon.html"><li class="mix Katon-Karagai sea mountain forest hot east"><img src="css/img/992739.jpg" alt="Image 3"><p>Katon-Karagai National Park</p></li></a>
+				<a href="kaiyndy.html"><li class="mix Kaiyndy pop sea mountain forest hot south"><img src="css/img/58177d65ff936762780540dc-5aba117e6cc80-1dbk4bu.jpg" alt="Image 5"><p>Kaiyndy Lake - Kolsay Lake</p></li></a>
+				<a href="Burabay.html"><li class="mix Burabay pop sea forest mountain normal north"><img src="css/img/borovoye2.jpg" alt="Image 9"><p>Burabay</p></li></a>
+				<a href="BAL.html"><li class="mix Big Almaty Lake pop sea mountain forest hot south"><img src="css/img/1561729692_2756922_1561729687_1449857almaty_lake____by__aOnaHC4.jpg" alt="Image 6"><p>Big Almaty Lake</p></li></a>
+				<a href="charyn.html"><li class="mix Charyn Canyon mountain hot south"><img src="css/img/8031u15171_charynskiy-kanon-i-bartogay2.jpg" alt="Image 7"><p>Charyn Canyon</p></li></a>
+				<a href="Imantau-Shalkar.html"><li class="mix Lakes Imantau and Shalkar sea forest normal north"><img src="css/img/1568870929_imantau-shalkarskaya-kurortnaya-zona.jpg" alt="Image 8"><p>Lakes Imantau and Shalkar</p></li></a>
+				<a href="markakol.html"><li class="mix Lake Markakol sea mountain forest hot east"><img src="css/img/markakol.png" alt="Image 4"><p>Lake Markakol</p></li></a>
+				<a href="Akkegershin-Plateau.html"><li class="mix Akkegershin Plateau mountain hot west"><img src="css/img/PEDvzY_wzbk.jpg" alt="Image 10"><p>Akkegershin Plateau</p></li></a>
+				<a href="Caspian-sea.html"><li class="mix Caspian Sea pop sea hot west"><img src="css/img/1504091380_caspian_sea_kaspiyskoe_more2.jpg" alt="Image 11"><p>Caspian Sea</p></li></a>
+				<a href="Aksu.html"><li class="mix Aksu Canyon sea waterfall hot south"><img src="css/img/01az4.jpg" alt="Image 12"><p>Aksu Canyon</p></li></a>
+				<a href="INDER LAKE.html"><li class="mix Inder Lake sea hot west"><img src="css/img/1579877078_untitled-7.jpg" alt="Image 13"><p>Inder Lake</p></li></a>
+				<a href="The Singing Dune - pearl of Altyn-Emel.html"><li class="mix The Singing Dune - pearl of Altyn-Emel mountain hot south"><img src="css/img/singing-barkhan-altyn-emel-kazakhstan-11.jpg" alt="Image 14"><p>The Singing Dune - pearl of Altyn-Emel</p></li></a>
+				<li class="gap"></li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+			</ul>
+			<div class="cd-fail-message">No results found</div>
+		</section> <!-- cd-gallery -->
+
+		<div class="cd-filter">
+			<form>
+				<div class="cd-filter-block">
+					<h4>Search</h4>
+					
+					<div class="cd-filter-content">
+						<input type="search" placeholder="Try Bayanaul...">
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Fauna</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter=".waterfall" type="checkbox" id="checkbox1">
+			    			<label class="checkbox-label" for="checkbox1">Waterfall</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".sea" type="checkbox" id="checkbox2">
+							<label class="checkbox-label" for="checkbox2">Sea</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".forest" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Forest</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".mountain" type="checkbox" id="checkbox4">
+							<label class="checkbox-label" for="checkbox4">Mountain</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Region</h4>
+					
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Choose an option</option>
+								<option value=".east">East</option>
+								<option value=".west">West</option>
+								<option value=".north">North</option>
+								<option value=".south">South</option>
+								<option value=".central">Central</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Climate</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter="" type="radio" name="radioButton" id="radio1" checked>
+							<label class="radio-label" for="radio1">All</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".hot" type="radio" name="radioButton" id="radio2">
+							<label class="radio-label" for="radio2">hot</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".normal" type="radio" name="radioButton" id="radio3">
+							<label class="radio-label" for="radio3">normal</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+			</form>
+
+			<a href="#0" class="cd-close">Close</a>
+		</div> <!-- cd-filter -->
+
+		<a href="#0" class="cd-filter-trigger">Filters</a>
+	</main> <!-- cd-main-content -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script type="text/javascript">
+	var delay_popup = 1000;
+	setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+  </script>
+</body>
+</html>
